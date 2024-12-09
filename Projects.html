@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <style>
-     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-         * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -27,6 +27,27 @@
             padding: 20px;
             text-align: center;
             border-radius: 8px;
+            position: relative;
+        }
+
+        header a {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            border: 2px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #555;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        header a:hover {
+            background-color: #777;
+            transform: translateY(-50%) scale(1.05);
         }
 
         h1 {
@@ -168,10 +189,13 @@
 </head>
 <body>
     <header>
+        <!-- Back button -->
+        <a href="PortfolioMenu.html">Back</a>
         <h1>My Projects</h1>
     </header>
     
     <div class="main-container">
+        <!-- Canva Projects -->
         <div class="side-nav" style="text-align: center;">
             <h1>Canva Projects & Logos</h1>
             <div class="project-container">
@@ -182,6 +206,7 @@
             </div>
         </div>
 
+        <!-- Web Development Projects -->
         <div class="side-nav" style="text-align: center;">
             <h2>Web Dev & Design</h2>
             <div class="project-container">
@@ -192,6 +217,7 @@
             </div>
         </div>
 
+        <!-- Collaboration Projects -->
         <div class="side-nav" style="text-align: center;">
             <h3>Collaboration</h3>
             <div class="project-container">

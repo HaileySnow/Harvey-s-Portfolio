@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,27 +26,44 @@
         <div class="home-content">
             <h1>Hi, I'm Harvey Funda</h1>
             <h3>Web Designer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Nostrum itaque cum porro, sit corporis modi deleniti accusamus, 
-                quod magnam autem magni tempore, earum necessitatibus non minus. 
-                Pariatur dolor fuga quae.</p>
-                <div class="btn-box">
-                    <a href="Hire Me.html">Hire Me</a>
-                    <a href="#">Contact</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum itaque cum porro, sit corporis modi deleniti accusamus, quod magnam autem magni tempore, earum necessitatibus non minus. Pariatur dolor fuga quae.</p>
+            <div class="btn-box">
+                <a href="Hire Me.html">Hire Me</a>
+                <a href="#" id="contactButton">Contact</a>
+                <div id="contactInfo" class="hidden">
+                    <p>Email: harvey.funda07@gmail.com</p>
+                    <p>Phone: 09705656631</p>
                 </div>
+            </div>
         </div>
 
         <div class="home-sci">
-           
-            <a href="https://www.facebook.com/markharvey.funda.7/" target="_blank"><i class='bx bxl-facebook'></i></a>
-            <a href="https://discordapp.com/users/966296266252378133" target="_blank"><i class='bx bxl-discord-alt'></i></a>
-            <a href="https://www.instagram.com/yoasovey/" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://github.com/HaileySnow" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.facebook.com/markharvey.funda.7/" target="_blank"><i class="bx bxl-facebook"></i></a>
+            <a href="https://discordapp.com/users/966296266252378133" target="_blank"><i class="bx bxl-discord-alt"></i></a>
+            <a href="https://www.instagram.com/yoasovey/" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="https://github.com/HaileySnow" target="_blank"><i class="bx bxl-github"></i></a>
         </div>
 
         <span class="home-imgHover"></span>
-
     </section>
+
+    <script src="script.js"></script>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contactButton = document.getElementById('contactButton');
+        const contactInfo = document.getElementById('contactInfo');
+    
+        contactButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (contactInfo.classList.contains('hidden')) {
+                contactInfo.classList.remove('hidden');
+            } else {
+                contactInfo.classList.add('hidden');
+            }
+        });
+    });
+    </script>
+    
 
 </html>

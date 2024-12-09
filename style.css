@@ -319,6 +319,25 @@ body {
     z-index: 100;
 
 }
+.hidden {
+    display: none;
+}
+
+#contactInfo {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 10px); /* Position to the right of the Contact button */
+    background: #00abf0;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: opacity 0.1s ease-in-out;
+    z-index: 100;
+}
+
+
 
 /*KEYFRAMES ANIMATION*/
 @keyframes showRight {
