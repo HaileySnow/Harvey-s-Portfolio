@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('starrey.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            flex-wrap: wrap;
+        }
+
+        .side-nav {
+            width: 30%;
+            background-color: #b6afaf;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .side-nav h1, .side-nav h2, .side-nav h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            border: 2px solid #333;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.726);
+        }
+
+        .project-item {
+            width: 150px;
+            height: 150px;
+            background-color: #ccc;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .popup:target {
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        @media (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .side-nav {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .project-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-item {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .side-nav {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .project-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .project-item {
+                width: 100%;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+    </header>
+    
+    <div class="main-container">
+        <div class="side-nav" style="text-align: center;">
+            <h1>Canva Projects & Logos</h1>
+            <div class="project-container">
+                <a href="#popup1"><div class="project-item"><img src="kanal.png" alt="Project 1"></div></a>
+                <a href="#popup2"><div class="project-item"><img src="poster.jpg" alt="Project 2"></div></a>
+                <a href="#popup3"><div class="project-item"><img src="barbie logo.png" alt="Project 3"></div></a>
+                <a href="#popup4"><div class="project-item"><img src="barbie.jpg" alt="Project 4"></div></a>
+            </div>
+        </div>
+
+        <div class="side-nav" style="text-align: center;">
+            <h2>Web Dev & Design</h2>
+            <div class="project-container">
+                <a href="#popup5"><div class="project-item"><img src="starbaks.png" alt="Project 5"></div></a>
+                <a href="#popup6"><div class="project-item"><img src="company.jpg" alt="Project 6"></div></a>
+                <a href="#popup7"><div class="project-item"><img src="winx.png" alt="Project 7"></div></a>
+                <a href="#popup8"><div class="project-item"><img src="tuition.jpg" alt="Project 8"></div></a>
+            </div>
+        </div>
+
+        <div class="side-nav" style="text-align: center;">
+            <h3>Collaboration</h3>
+            <div class="project-container">
+                <a href="#popup9"><div class="project-item"><img src="mid.png" alt="Project 9"></div></a>
+                <a href="#popup10"><div class="project-item"><img src="high.png" alt="Project 10"></div></a>
+                <a href="#popup11"><div class="project-item"><img src="app.jpg" alt="Project 11"></div></a>
+                <a href="#popup12"><div class="project-item"><img src="database.jpg" alt="Project 12"></div></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Images -->
+    <div id="popup1" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="kanal.png" alt="Project 1">
+    </div>
+    <div id="popup2" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="poster.jpg" alt="Project 2">
+    </div>
+    <div id="popup3" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="barbie logo.png" alt="Project 3">
+    </div>
+    <div id="popup4" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="barbie.jpg" alt="Project 4">
+    </div>
+    <div id="popup5" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="starbaks.png" alt="Project 5">
+    </div>
+    <div id="popup6" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="company.jpg" alt="Project 6">
+    </div>
+    <div id="popup7" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="winx.png" alt="Project 7">
+    </div>
+    <div id="popup8" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="tuition.jpg" alt="Project 8">
+    </div>
+    <div id="popup9" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="mid.png" alt="Project 9">
+    </div>
+    <div id="popup10" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="high.png" alt="Project 10">
+    </div>
+    <div id="popup11" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="app.jpg" alt="Project 11">
+    </div>
+    <div id="popup12" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="database.jpg" alt="Project 12">
+    </div>
+</body>
+</html>
